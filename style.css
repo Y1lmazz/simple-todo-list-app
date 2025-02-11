@@ -1,0 +1,190 @@
+* {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #e4f1fe;
+    height: 100vh;
+    background-image: url(https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?q=80&w=1948&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+    background-position: center;
+}
+
+h1 {
+    font-size: 50px;
+    text-align: center;
+    padding: 30px 0;
+    font-weight: 1000px;
+    position: relative;
+}
+
+h1::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    background-color: #8dc6ff;
+    opacity: 1;
+    filter: blur(50px)
+}
+
+.input-content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 800px;
+    height: 150px;
+    margin: 0 auto;
+    padding: 20px;
+    gap: 20px;
+
+}
+
+.input-content::before {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    content: "";
+    background-color: #22313f;
+    filter: blur(10px);
+    transition: .4s linear;
+    border-radius: 5px;
+}
+
+.input-content:hover::before {
+    filter: blur(0px);
+}
+
+.todo-input {
+    background-color: #e4f1fe;
+    font-size: 16px;
+    width: 300px;
+    height: 40px;
+    padding: 2px 6px;
+    border: none;
+    outline: none;
+}
+
+
+.addButton {
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 12px;
+    border: none;
+    background-color: rgb(121, 245, 121);
+    transition: .2s ease;
+    cursor: pointer;
+}
+
+.addButton:hover {
+    background-color: rgb(80, 239, 80);
+    transform: scale(1.1);
+}
+
+.addButton:active {
+    background-color: rgb(3, 99, 0);
+}
+
+
+.todo-content {
+    position: relative;
+    width: 800px;
+    margin: 30px auto;
+    display: flex;
+    justify-content: center;
+}
+
+.todo-content::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding-top: 50px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    background-color: #8dc6ff;
+    opacity: .4;
+    border-radius: 5px;
+    filter: blur(10px);
+}
+
+ul {
+    border: 2px solid rgba(0, 0, 0, 0.146);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    list-style: none;
+    width: 450px;
+    position: relative;
+    left: -32px;
+    font-weight: bold;
+    position: relative;
+}
+
+ul::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    background-color: #22313f;
+}
+
+
+li {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid rgba(0, 0, 0, 0.406);
+    padding: 10px;
+    margin: 10px;
+    animation: fade-in .8s linear;
+    background-color: #e4f1fe;
+    border-radius: 8px;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.deleteButton {
+    color: white;
+    font-weight: 500;
+    font-size: .9rem;
+    padding: 12px;
+    border: none;
+    background-color: rgb(255, 60, 60);
+    cursor: pointer;
+    border-radius: 3px;
+    transition: .2s linear;
+}
+
+.deleteButton:hover {
+    background-color: rgb(196, 46, 46);
+    scale: 1.1;
+
+}
